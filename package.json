@@ -1,0 +1,32 @@
+{
+  "name": "astroship",
+  "type": "module",
+  "version": "2.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^3.0.1",
+    "@astrojs/sitemap": "^3.1.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/bricolage-grotesque": "^5.0.6",
+    "@fontsource-variable/inter": "^5.0.18",
+    "@iconify-json/bx": "^1.1.10",
+    "@iconify-json/simple-icons": "^1.1.102",
+    "@iconify-json/uil": "^1.1.8",
+    "@tailwindcss/typography": "^0.5.13",
+    "astro": "^4.8.7",
+    "astro-icon": "^1.1.0",
+    "astro-lazy-youtube-embed": "^0.5.4",
+    "astro-navbar": "^2.3.2",
+    "astro-seo": "^0.8.3",
+    "sharp": "^0.33.4",
+    "tailwindcss": "^3.4.3"
+  },
+  "packageManager": "pnpm@10.5.0+sha512.11106a5916c7406fe4b8cb8e3067974b8728f47308a4f5ac5e850304afa6f57e2847d7950dfe78877d8d36bfb401d381c4215db3a4c3547ffa63c14333a6fa51"
+}

@@ -1,14 +1,19 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+const slides = ['slide-1.png', 'slide-2.png', 'slide-3.png', 'slide-4.png', 'slide-5.png', 'slide-6.png'];
 ---
 
 <div class='slider'>
-  <img
-    class='active'
-    src='https://images.pexels.com/photos/30811019/pexels-photo-30811019/free-photo-of-charming-parisian-street-cafe-with-cozy-outdoor-seating.jpeg?auto=compress&cs=tinysrgb&w=600'
-  />
-  <img src='https://images.pexels.com/photos/31190087/pexels-photo-31190087/free-photo-of-majestic-northern-harrier-in-flight-over-quincy.jpeg?auto=compress&cs=tinysrgb&w=600' />
-  <img src='https://images.pexels.com/photos/30645780/pexels-photo-30645780/free-photo-of-tranquil-coastal-scene-with-sailboat-in-france.jpeg?auto=compress&cs=tinysrgb&w=600' />
+  {
+    slides.map((slide, index) => (
+      <img
+        class={index === 0 ? 'active' : ''}
+        src={`/slides/${slide}`}
+        alt={`Slide ${index + 1}`}
+      />
+    ))
+  }
   <nav class='slider-nav'>
     <ul>
       <li class='arrow'>
@@ -26,6 +31,21 @@ import { Icon } from 'astro-icon/components';
 </div>
 
 <style>
+  .slider img {
+    border-radius: 5px;
+    object-fit: cover;
+    aspect-ratio: 3 / 2;
+    max-width: 100%;
+    display: none;
+    box-shadow: 10px 10px 0 #0000000d;
+    border: 3px solid #000;
+  }
+
+  .slider img.active {
+    display: block;
+    animation: fadeImg 0.8s;
+  }
+
   button {
     position: relative;
     display: inline-block;
@@ -69,23 +89,9 @@ import { Icon } from 'astro-icon/components';
     text-align: center;
   }
 
-  .slider img {
-    border-radius: 5px;
-    height: 500px;
-    object-fit: cover;
-    aspect-ratio: 16 / 9;
-    max-width: 100%;
-    display: none;
-    box-shadow: 10px 10px 0 #0000000d;
-  }
-
-  .slider img.active {
-    display: block;
-    animation: fadeImg 0.8s;
-  }
-
   .slider-nav .arrow {
     flex: 0 0 15%;
+    justify-content: center;
   }
 
   .slider-nav a {

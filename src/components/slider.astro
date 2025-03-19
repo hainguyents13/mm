@@ -9,7 +9,7 @@ const slides = ['slide-1.png', 'slide-2.png', 'slide-3.png', 'slide-4.png', 'sli
     slides.map((slide, index) => (
       <img
         class={index === 0 ? 'active' : ''}
-        src={`/slides/${slide}`}
+        src={`/mm/slides/${slide}`}
         alt={`Slide ${index + 1}`}
       />
     ))
@@ -58,6 +58,10 @@ const slides = ['slide-1.png', 'slide-2.png', 'slide-3.png', 'slide-4.png', 'sli
     padding: 20px 5px;
     color: $arrow;
     font-size: 2rem;
+  }
+
+  button:hover {
+    color: #666;
   }
 
   button span {

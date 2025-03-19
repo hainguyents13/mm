@@ -8,4 +8,5 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://markingmate.tw",
   integrations: [tailwind(), mdx(), sitemap(), icon()],
+  base: "/mm/",
 });

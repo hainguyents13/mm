@@ -56,10 +56,12 @@ const features = [
   <p class='text-lg mt-4 text-slate-600'>Optimal performance, absolute precision, working seamlessly with both 2D and 3D.</p>
 </div>
 
-<div class='grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16'>
+<div class='grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6'>
   {
     features.map((item) => (
-      <div class='flex gap-4 items-start'>
+      <a
+        class='flex gap-4 items-start hover:shadow-lg border border-transparent hover:border-gray-800 rounded-lg p-4 transition-colors duration-300'
+        href='#'>
         <div class='mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0'>
           <Icon
             class='text-white'
@@ -69,7 +71,7 @@ const features = [
         <div>
           <h3 class='font-semibold text-lg'>{item.title}</h3> <p class='text-slate-500 mt-2 leading-relaxed'>{item.description}</p>
         </div>
-      </div>
+      </a>
     ))
   }
 </div>

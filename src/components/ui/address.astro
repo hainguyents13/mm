@@ -1,0 +1,32 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const address = [
+  {
+    address: 'No. 8, Beiyuan 2nd Road, Southern Taiwan Science Park, Tainan City 745093, Taiwan (R.O.C.)',
+    email: 'support@markingmate.tw',
+  },
+  {
+    address: 'No. 8, Beiyuan 2nd Road, Southern Taiwan Science Park, Tainan City 745093, Taiwan (R.O.C.)',
+    email: 'support@markingmate.vn',
+    phone: '+84 123 456 789',
+  },
+];
+---
+
+{
+  address.map((item) => (
+    <li class='text-sm flex items-start gap-2 lg:justify-start'>
+      <Icon
+        class='h-5 text-blue-600'
+        size={32}
+        name='bx:map'
+      />
+      <ul class='flex flex-col gap-2'>
+        <li>{item.address}</li>
+        <li class='text-gray-600'>Email: {item.email}</li>
+        {item.phone && <li class='text-gray-600'>Phone: {item.phone}</li>}
+      </ul>
+    </li>
+  ))
+}

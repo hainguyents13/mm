@@ -1,0 +1,77 @@
+---
+import Container from '@components/container.astro';
+import Sectionhead from '@components/sectionhead.astro';
+import Layout from '@layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+
+const downloads = [
+  {
+    name: 'MarkingMate 型錄',
+    category: 'Manual',
+    language: '繁體中文	',
+    version: '2023-07-13',
+    size: '20.09 MB',
+    url: 'http://www.elogic.com.tw/download/MarkingMate_27A_DM_CH.pdf?ts=1742446006',
+  },
+  {
+    name: 'MarkingMate Catalog',
+    category: 'Catalog',
+    language: 'English	',
+    version: '2023-07-13',
+    size: '19.82 M	',
+    url: 'http://www.elogic.com.tw/download/MarkingMate_27A_DM_CH.pdf?ts=1742446006',
+  },
+  {
+    name: 'MarkingMate2.7D 使用手冊	',
+    category: 'Manual',
+    language: '繁體中文	',
+    version: '2021-10-01',
+    size: '7.19 M',
+    url: 'http://www.elogic.com.tw/download/MarkingMate_27A_DM_CH.pdf?ts=1742446006',
+  },
+];
+---
+
+<Layout title='Download'>
+  <Container>
+    <Sectionhead>
+      <Fragment slot='title'>Download</Fragment>
+      <Fragment slot='desc'>Download our software, tools and manuals</Fragment>
+    </Sectionhead>
+    <main class='mt-16'>
+      <ul class='grid gap-2 max-w-4xl mx-auto'>
+        {
+          downloads.map((item) => (
+            <li class='border border-gray-200 py-3 px-5 rounded-md hover:shadow-md hover:border-gray-800 transition-all duration-300'>
+              <a
+                href={item.url as string}
+                target='_blank'
+                rel='noopener noreferrer'>
+                <div class='grid grid-cols-12 gap-5 md:gap-10 items-center'>
+                  <div class='col-span-8 flex items-center gap-6'>
+                    <Icon
+                      class='h-14 text-blue-500'
+                      size={60}
+                      name='bx:cloud-download'
+                    />
+                    <div>
+                      <span class='text-blue-400 uppercase tracking-wider text-xs font-medium'>{item.category}</span>
+                      <div class='text-xl font-semibold leading-snug tracking-tight mt-1 '>{item.name}</div>
+                    </div>
+                  </div>
+                  <div class='flex gap-2 col-span-4'>
+                    <span class='text-gray-400'>{item.language}</span>
+                    <span class='text-gray-400'>• </span>
+                    <span class='text-gray-400'>{item.size}</span>
+                    <span class='text-gray-400'>• </span>
+                    <span class='text-gray-400'>{item.version}</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>

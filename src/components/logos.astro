@@ -1,34 +1,24 @@
 ---
-// @ts-ignore
-import { Icon } from 'astro-icon/components';
+import { Picture } from 'astro:assets';
+
+const logos = [{ src: '/partners/Honda-Plus-Logo.png' }, { src: '/partners/mitsubishi.png' }, { src: '/partners/isuzu.jpg' }, { src: '/partners/kane-m.png' }, { src: '/partners/nec.png' }];
 ---
 
 <div class='mt-24'>
-  <h2 class='text-center text-slate-500'>Our partners</h2>
+  <h2 class='text-center text-slate-500'>Brands We've Worked With</h2>
   <div class='flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap'>
-    <Icon
-      class='size-8 md:size-12'
-      name='simple-icons:react'
-    />
-    <Icon
-      class='size-8 md:size-12'
-      name='simple-icons:svelte'
-    />
-    <Icon
-      class='size-8 md:size-12'
-      name='simple-icons:astro'
-    />
-    <Icon
-      class='size-8 md:size-16'
-      name='simple-icons:tailwindcss'
-    />
-    <Icon
-      class='size-8 md:size-16'
-      name='simple-icons:alpinedotjs'
-    />
-    <Icon
-      class='size-8 md:size-12'
-      name='simple-icons:vercel'
-    />
+    {
+      logos.map((l) => (
+        <Picture
+          src={l.src}
+          alt={l.src}
+          width={100}
+          height={50}
+          loading={'eager'}
+          decoding={'sync'}
+          class='w-full rounded-md object-contain object-center h-10 bg-white'
+        />
+      ))
+    }
   </div>
 </div>

@@ -39,15 +39,15 @@ const category = await getEntry("categories", entry.data.category);
         height={600}
         loading={"eager"}
         decoding={"sync"}
-        class="w-full rounded-md object-contain max-h-96 object-center bg-white"
+        class="w-full rounded-md object-contain object-center bg-white"
       />
       <Content />
     </div>
     <div class="text-center mt-12 max-w-3xl mx-auto">
       <a
-        href="/products"
+        href={`/products/${category?.slug || ""}`}
         class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
-        >← Back to Products</a
+        >← Back to {category?.data.name || "Products"}</a
       >
     </div>
   </Container>

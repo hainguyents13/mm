@@ -1,16 +1,10 @@
 ---
-draft: false
-title: "EL-CVP - Computer Vision Positioning"
-snippet: "EL_CVP system is purpose on precise laser work by digital positioning, based on MarkingMate. Suited for precise marking drilling and cutting industrial application."
-image: { src: "/products/01img07.jpg", alt: "" }
-publishDate: "2024-01-06 15:39"
-category: "Software"
-author: "MarkingMate"
-tags: [software, laser, markingmate]
+name: "MM3D"
+image: { src: "/products/mm3d.png", alt: "" }
+category: "marking-softwares"
 ---
 
-EL_CVP system is purpose on precise laser work by digital positioning, based on MarkingMate.
-Suited for precise marking drilling and cutting industrial application.
+MM3D is a 3D marking software based on MarkingMate.
 
 ## Features
 

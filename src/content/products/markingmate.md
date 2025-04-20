@@ -1,12 +1,7 @@
 ---
-draft: false
-title: "MarkingMate & MarkingMate 3D"
-snippet: "MarkingMate is window-based laser marking software developed by Eastern Logic, which is easy and friendly to use powerful tool. Support variety vector and bitmap graphic, and provide library and OCX component for marking solution provider. Easily to mark on plane or non-plane surface, also support variety PCI, PCIe, USB, EtherNet marking controller, able to control almost all kinds of laser."
-image: { src: "/products/mm.png", alt: "" }
-publishDate: "2024-01-07 15:39"
-category: "Software"
-author: "MarkingMate"
-tags: [software, laser, markingmate]
+name: "MarkingMate"
+image: { src: "/products/markingmate.png", alt: "" }
+category: "marking-softwares"
 ---
 
 MarkingMate is window-based laser marking software developed by Eastern Logic, which is easy and friendly to use powerful tool. Support variety vector and bitmap graphic, and provide library and OCX component for marking solution provider. Easily to mark on plane or non-plane surface, also support variety PCI, PCIe, USB, EtherNet marking controller, able to control almost all kinds of laser.

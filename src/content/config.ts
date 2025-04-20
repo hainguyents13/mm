@@ -31,10 +31,34 @@ const teamCollection = defineCollection({
   }),
 });
 
+const categoryCollection = defineCollection({
+  schema: z.object({
+    id: z.number(),
+    name: z.string(),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    description: z.string().optional(),
+  }),
+});
+
+const productCollection = defineCollection({
+  schema: z.object({
+    name: z.string(),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    category: z.string(),
+  }),
+});
+
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   blog: blogCollection,
   team: teamCollection,
-  products: blogCollection,
+  categories: categoryCollection,
+  products: productCollection,
 };

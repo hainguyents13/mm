@@ -19,8 +19,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "MarkingMateVN"
-  : "MarkingMateVN - Comprehensive Laser Engraving Software Solution";
+  ? title + " | " + "MarkingMate"
+  : "MarkingMate - Comprehensive Laser Engraving Software Solution";
 ---
 
 <!doctype html>
@@ -37,19 +37,19 @@ const makeTitle = title
       description="MarkingMate & MarkingMate3D - Comprehensive Laser Engraving Software Solution"
       canonical={canonicalURL}
       twitter={{
-        creator: "@markingmatevn",
-        site: "@markingmatevn",
+        creator: "@markingmate",
+        site: "@markingmate",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `MarkingMateVN - ${title}`,
+          title: `MarkingMate - ${title}`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "MarkingMateVN Home Page Image",
+          alt: "MarkingMate Home Page Image",
         },
       }}
     />

@@ -1,9 +1,10 @@
 ---
-import Footer from "@components/footer.astro";
-import Navbar from "@components/navbar/navbar.astro";
-import "@fontsource-variable/bricolage-grotesque";
-import "@fontsource-variable/inter/index.css";
-import { SEO } from "astro-seo";
+import Footer from '@components/footer.astro';
+import Navbar from '@components/navbar/navbar.astro';
+import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource-variable/inter/index.css';
+import Analytics from '@vercel/analytics/astro';
+import { SEO } from 'astro-seo';
 
 export interface Props {
   title: string;
@@ -11,45 +12,54 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/products/markingmate.png",
-  Astro.site
-).toString();
+const resolvedImageWithDomain = new URL('/products/markingmate.png', Astro.site).toString();
 
 const { title } = Astro.props;
 
-const makeTitle = title
-  ? title + " | " + "MarkingMate"
-  : "MarkingMate - Comprehensive Laser Engraving Software Solution";
+const makeTitle = title ? title + ' | ' + 'MarkingMate' : 'MarkingMate - Comprehensive Laser Engraving Software Solution';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta charset='UTF-8' />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href='/favicon.svg'
+    />
+    <meta
+      name='generator'
+      content={Astro.generator}
+    />
+    <link
+      rel='sitemap'
+      href='/sitemap-index.xml'
+    />
+    <Analytics />
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="MarkingMate & MarkingMate3D - Comprehensive Laser Engraving Software Solution"
+      description='MarkingMate & MarkingMate3D - Comprehensive Laser Engraving Software Solution'
       canonical={canonicalURL}
       twitter={{
-        creator: "@markingmate",
-        site: "@markingmate",
-        card: "summary_large_image",
+        creator: '@markingmate',
+        site: '@markingmate',
+        card: 'summary_large_image',
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
-          type: "website",
+          type: 'website',
           title: `MarkingMate - ${title}`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "MarkingMate Home Page Image",
+          alt: 'MarkingMate Home Page Image',
         },
       }}
     />
